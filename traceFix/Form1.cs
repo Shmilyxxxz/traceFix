@@ -18,6 +18,7 @@ namespace traceFix
         private List<string> barCodeList = new List<string>();
         private List<string> fileList = new List<string>();
         private string Dictionary = string.Empty;
+        
         //private string newBarcode = string.Empty;
         public Form1()
         {
@@ -26,9 +27,16 @@ namespace traceFix
 
         private void openFileDialog_SourceFile_FileOk(object sender, CancelEventArgs e)
         {
-            if(fileList.Count!=0)
+
+            if (fileList.Count!=0)
                 fileList.Clear();
             fileList = openFileDialog_SourceFile.FileNames.ToList();
+
+            progressBar1.Value = 0;
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = fileList.Count()* barCodeList.Count();
+            label4.Text = progressBar1.Maximum.ToString();
+
             for (int i=0;i <fileList.Count();i++)
             {
                 ConverTraceFile(fileList[i]);
@@ -70,6 +78,8 @@ namespace traceFix
                     {
                         serializer.Serialize(stream, data,ns);
                     }
+                    progressBar1.PerformStep();
+                    label3.Text = progressBar1.Value.ToString();
                 }
             }
             
@@ -103,5 +113,6 @@ namespace traceFix
         {
 
         }
+        
     }
 }

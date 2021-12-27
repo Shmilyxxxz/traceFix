@@ -19,7 +19,6 @@ namespace traceFix
         private List<string> fileList = new List<string>();
         private string Dictionary = string.Empty;
         
-        //private string newBarcode = string.Empty;
         public Form1()
         {
             InitializeComponent();
@@ -53,7 +52,6 @@ namespace traceFix
         private void ConverTraceFile(string filePath)
         {
             FileStream fs = File.Open(filePath, FileMode.Open);
-            //XmlSerializer serializer = new XmlSerializer(typeof(TraceabilityData));
             XmlSerializer serializer = new XmlSerializer(typeof(TraceabilityData));
 
             XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
@@ -86,10 +84,6 @@ namespace traceFix
             
 
         }
-
-
-
-
         private void button2_Click(object sender, EventArgs e)
         {
             if(folderBrowserDialog1.ShowDialog()==DialogResult.OK)
@@ -109,11 +103,5 @@ namespace traceFix
             }
             textBox3.Text = openFileDialog_barcodeFile.FileName;
         }
-
-        private void openFileDialog_barcodeFile_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
-        
     }
 }

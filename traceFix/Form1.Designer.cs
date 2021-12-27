@@ -39,11 +39,11 @@ namespace traceFix
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.openFileDialog_barcodeFile = new System.Windows.Forms.OpenFileDialog();
             this.label3 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.openFileDialog_barcodeFile = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // openFileDialog_SourceFile
@@ -124,12 +124,6 @@ namespace traceFix
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // openFileDialog_barcodeFile
-            // 
-            this.openFileDialog_barcodeFile.FileName = "openFileDialog_barcodeFile";
-            this.openFileDialog_barcodeFile.Multiselect = true;
-            this.openFileDialog_barcodeFile.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_barcodeFile_FileOk);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -165,11 +159,16 @@ namespace traceFix
             this.label5.TabIndex = 11;
             this.label5.Text = "/";
             // 
+            // openFileDialog_barcodeFile
+            // 
+            this.openFileDialog_barcodeFile.FileName = "openFileDialog_barcodeFile";
+            this.openFileDialog_barcodeFile.Multiselect = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 297);
+            this.ClientSize = new System.Drawing.Size(368, 287);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -202,11 +201,11 @@ namespace traceFix
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.OpenFileDialog openFileDialog_barcodeFile;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.OpenFileDialog openFileDialog_barcodeFile;
     }
 }
 
